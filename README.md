@@ -22,6 +22,8 @@ l'incident.
 
 https://h4ckg3t.github.io/Tenant-zero/Boite_Blanche_Audit_du_Code.html
 
+Le cours s'ouvre aussi dans le poste Tenant Zéro : dossier Audit du code sur le bureau, avec le cours et le lab.
+
 Ce cours charge un interpréteur Python dans le navigateur (dossier pyodide/, environ 13 Mo),
 récupéré seulement au premier lancement d'une mission Python. Une connexion est donc nécessaire à
 ce moment-là, même si le reste du cours fonctionne hors ligne.
