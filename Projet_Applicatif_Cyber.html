@@ -62,7 +62,7 @@ ol.num{padding-left:2.6vh;display:grid;gap:1vh}
  <p class="rep">1. L'objectif</p>
  <h2>Ce que vous allez faire aujourd'hui</h2>
  <div class="texte">
-  <p>Par équipe, vous développez une petite application web utile à une équipe de sécurité. Vous choisissez le sujet dans la liste proposée et vous travaillez dans le langage de votre choix.</p>
+  <p>Par équipe, vous développez une petite application web utile à une équipe de sécurité. Vous choisissez le sujet dans la liste proposée et vous travaillez dans le langage de votre choix. Elle fonctionne en local sur votre poste. Aucun serveur n'est à déployer.</p>
   <p>Le résultat attendu n'est pas un produit fini. C'est un premier périmètre qui fonctionne et que chaque membre de l'équipe sait expliquer.</p>
   <p>L'application manipule des informations sensibles. Vous décidez vous-mêmes de ce qu'il faut protéger et de la manière de le faire. Aucune liste de mesures n'est fournie.</p>
   <p>En fin de journée, chaque équipe présente son application, ouvre son code et le commente.</p>
@@ -88,7 +88,7 @@ ol.num{padding-left:2.6vh;display:grid;gap:1vh}
     <li><i>1</i><span><b>Des comptes et deux rôles.</b> On se connecte. Un analyste et un administrateur ne voient pas et ne font pas la même chose.</span></li>
     <li><i>2</i><span><b>Une clé d'API.</b> L'application interroge une API de renseignement avec la clé ci-dessous. L'API est fictive et vous simulez ses réponses. La clé se traite comme une vraie.<br><span class="cle">orb_live_7Q2M9XK4T8VD3LHB</span></span></li>
     <li><i>3</i><span><b>Une saisie réaffichée.</b> Au moins un texte saisi par un utilisateur est affiché à un autre, par exemple un commentaire ou un motif.</span></li>
-    <li><i>4</i><span><b>Des données conservées.</b> Ce qui est saisi se retrouve après un rechargement de la page.</span></li>
+    <li><i>4</i><span><b>Des données conservées.</b> Ce qui est saisi se retrouve après un rechargement de la page. Le stockage du navigateur ou une feuille Google reliée par un script conviennent.</span></li>
    </ul>
   </div>
  </div>
@@ -108,14 +108,14 @@ ol.num{padding-left:2.6vh;display:grid;gap:1vh}
 
 <section class="s">
  <p class="rep">4. La sécurité en front seul</p>
- <h2>Une application sans serveur se sécurise aussi</h2>
+ <h2>Une application locale se sécurise aussi</h2>
  <div class="deux">
   <div class="col"><h3>Ce que la page peut déclarer elle-même</h3><p>Le navigateur applique des règles écrites dans le HTML, avec des balises et des attributs. Aucun serveur n'est nécessaire. À vous de trouver lesquels répondent à ces questions.</p>
    <ol class="num"><li>Qu'est-ce que votre page a le droit de charger et d'exécuter ?</li><li>Comment savoir qu'un fichier chargé depuis un autre site n'a pas été modifié ?</li><li>Que peut faire la page qui s'ouvre quand on clique sur un lien externe ?</li><li>Que transmet votre page aux sites vers lesquels elle pointe ?</li><li>Comment vos champs de saisie et de mot de passe sont-ils déclarés ?</li><li>Comment votre code insère-t-il dans la page un texte venu d'un utilisateur ?</li></ol></div>
   <div class="col"><h3>Ce que le front ne peut pas faire seul</h3><p>Tout ce qui est envoyé au navigateur est lisible par celui qui l'utilise.</p>
-   <ol class="num"><li>Un secret placé dans le code du front n'est pas caché.</li><li>Un contrôle fait seulement dans le navigateur peut être contourné.</li><li>Si votre application n'a pas de serveur, votre revue dit ce qu'il devrait faire à la place du front.</li></ol></div>
+   <ol class="num"><li>Un secret placé dans le code du front n'est pas caché.</li><li>Un contrôle fait seulement dans le navigateur peut être contourné.</li><li>Si vos données sont dans une feuille Google, demandez-vous qui peut la lire, qui peut y écrire et où s'exécute le script qui la relie.</li><li>Votre revue dit ce qui devrait être fait ailleurs que dans le navigateur.</li></ol></div>
  </div>
- <p class="sous">Ces protections sont attendues dans tous les projets, avec ou sans serveur.</p>
+ <p class="sous">Ces protections sont attendues dans tous les projets.</p>
 </section>
 
 <section class="s">
