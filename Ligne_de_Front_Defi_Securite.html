@@ -107,7 +107,19 @@ ol.num{padding-left:2.6vh;display:grid;gap:1vh}
 </section>
 
 <section class="s">
- <p class="rep">4. Le déroulé</p>
+ <p class="rep">4. La sécurité en front seul</p>
+ <h2>Une application sans serveur se sécurise aussi</h2>
+ <div class="deux">
+  <div class="col"><h3>Ce que la page peut déclarer elle-même</h3><p>Le navigateur applique des règles écrites dans le HTML, avec des balises et des attributs. Aucun serveur n'est nécessaire. À vous de trouver lesquels répondent à ces questions.</p>
+   <ol class="num"><li>Qu'est-ce que votre page a le droit de charger et d'exécuter ?</li><li>Comment savoir qu'un fichier chargé depuis un autre site n'a pas été modifié ?</li><li>Que peut faire la page qui s'ouvre quand on clique sur un lien externe ?</li><li>Que transmet votre page aux sites vers lesquels elle pointe ?</li><li>Comment vos champs de saisie et de mot de passe sont-ils déclarés ?</li><li>Comment votre code insère-t-il dans la page un texte venu d'un utilisateur ?</li></ol></div>
+  <div class="col"><h3>Ce que le front ne peut pas faire seul</h3><p>Tout ce qui est envoyé au navigateur est lisible par celui qui l'utilise.</p>
+   <ol class="num"><li>Un secret placé dans le code du front n'est pas caché.</li><li>Un contrôle fait seulement dans le navigateur peut être contourné.</li><li>Si votre application n'a pas de serveur, votre revue dit ce qu'il devrait faire à la place du front.</li></ol></div>
+ </div>
+ <p class="sous">Ces protections sont attendues dans tous les projets, avec ou sans serveur.</p>
+</section>
+
+<section class="s">
+ <p class="rep">5. Le déroulé</p>
  <h2>Cinq étapes</h2>
  <div class="cinq">
   <div class="case"><i>Étape 1</i><h3>Cadrer</h3><p>Constitution des équipes, choix de l'application, fiche de cadrage.</p><em>La fiche est validée par le formateur.</em></div>
@@ -120,7 +132,7 @@ ol.num{padding-left:2.6vh;display:grid;gap:1vh}
 </section>
 
 <section class="s">
- <p class="rep">5. Les livrables</p>
+ <p class="rep">6. Les livrables</p>
  <h2>Quatre éléments à rendre dans le dépôt</h2>
  <div class="quatre">
   <div class="case"><i>1</i><h3>La fiche de cadrage</h3><p>Le fichier <code>CADRAGE.md</code> validé au début. Si le périmètre a changé en cours de route, vous l'indiquez à la fin de la fiche.</p></div>
@@ -132,7 +144,7 @@ ol.num{padding-left:2.6vh;display:grid;gap:1vh}
 </section>
 
 <section class="s">
- <p class="rep">6. La démonstration</p>
+ <p class="rep">7. La démonstration</p>
  <h2>Vous présentez le code, pas un diaporama</h2>
  <div class="deux">
   <div><h3>La revue de code en quatre points</h3>
@@ -152,11 +164,13 @@ ol.num{padding-left:2.6vh;display:grid;gap:1vh}
 </section>
 
 <section class="s">
- <p class="rep">7. Le lexique</p>
+ <p class="rep">8. Le lexique</p>
  <h2>Les mots utilisés</h2>
  <div class="lex">
   <div><b>API</b><span>Interface de programmation. Le moyen par lequel une application en interroge une autre.</span></div>
   <div><b>Clé d'API</b><span>Le secret qui prouve à une API que l'appel vient d'un client autorisé.</span></div>
+  <div><b>Attribut</b><span>Un réglage écrit dans une balise, qui précise son comportement.</span></div>
+  <div><b>Balise</b><span>Un élément du langage HTML, qui décrit un morceau de la page au navigateur.</span></div>
   <div><b>Cadrage</b><span>Le moment où l'on décide ce que l'on fait, ce que l'on ne fait pas et dans quel ordre.</span></div>
   <div><b>Dépôt</b><span>Le dossier du projet suivi par Git, avec tout son historique.</span></div>
   <div><b>Front</b><span>La partie d'une application que l'utilisateur voit et manipule dans son navigateur.</span></div>
