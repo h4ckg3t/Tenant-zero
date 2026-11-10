@@ -1,0 +1,203 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projet applicatif cyber</title>
+<style>
+:root{--encre:#1b1b1b;--doux:#5a5a5a;--trait:#d0d0d0;--fond:#ffffff;--accent:#1f3a5f;--sans:"Segoe UI",Helvetica,Arial,sans-serif;--mono:Consolas,"Courier New",monospace;--haut:6vh;--bas:6vh}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;width:100%;overflow:hidden;background:var(--fond);color:var(--encre);font-family:var(--sans)}
+button{font-family:var(--sans);cursor:pointer}
+.hud{position:fixed;top:0;left:0;right:0;height:var(--haut);display:flex;align-items:center;justify-content:space-between;padding:0 4vw;border-bottom:1px solid var(--trait);font-size:1.7vh;color:var(--doux);white-space:nowrap;overflow:hidden}
+.pied{position:fixed;bottom:0;left:0;right:0;height:var(--bas);display:flex;align-items:center;gap:1vw;padding:0 4vw;border-top:1px solid var(--trait);font-size:1.6vh;color:var(--doux)}
+.pied .aide{margin-left:auto}
+.pied button{background:var(--fond);border:1px solid #9a9a9a;color:var(--encre);font-size:1.6vh;padding:.7vh 1.2vw}
+.pied button:hover{background:#eeeeee}
+#scene{position:fixed;top:var(--haut);bottom:var(--bas);left:0;right:0}
+.s{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:3vh 4vw;overflow:hidden}
+.s.on{display:flex}
+h1{font-size:9vh;font-weight:600;line-height:1.1;color:var(--encre)}
+h2{font-size:4vh;font-weight:600;line-height:1.2;margin-bottom:3vh;color:var(--encre)}
+h3{font-size:2.4vh;font-weight:600;margin-bottom:1vh;color:var(--accent)}
+p,li{font-size:2.15vh;line-height:1.5}
+.rep{font-size:1.9vh;color:var(--accent);margin-bottom:1vh}
+.sous-titre{font-size:3.2vh;line-height:1.35;margin-top:3vh;max-width:70vw}
+.etapes{font-size:2.3vh;color:var(--doux);margin-top:3vh}
+.texte{max-width:72vw}
+.texte p{font-size:2.6vh;line-height:1.55;margin-bottom:2.2vh}
+.texte p:last-child{margin-bottom:0}
+.deux{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:4vw}
+.liste{list-style:none;display:grid;gap:1.3vh}
+.liste li{display:grid;grid-template-columns:3.4vh minmax(0,1fr);gap:1vh}
+.liste li>i{font-style:normal;font-weight:600;color:var(--accent)}
+.liste b{font-weight:600}
+code{font-family:var(--mono);font-size:.95em}
+.cle{display:inline-block;margin-top:.8vh;font-family:var(--mono);font-size:2.1vh;border:1px solid #9a9a9a;padding:.5vh 1vw;user-select:all}
+ol.num{padding-left:2.6vh;display:grid;gap:1vh}
+.col{border-top:2px solid var(--encre);padding-top:1.6vh}
+.col>p{color:var(--doux);margin-bottom:1.4vh}
+.sous{display:flex;align-items:center;gap:1.4vw;margin-top:3vh;font-size:1.95vh;color:var(--doux)}
+.copie{background:var(--accent);color:#ffffff;border:none;font-size:1.9vh;padding:1vh 1.4vw;white-space:nowrap}
+.copie:hover{background:#16293f}
+.cinq{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2vw}
+.quatre{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2.4vw}
+.case{border-top:2px solid var(--encre);padding-top:1.6vh}
+.case>i{display:block;font-style:normal;font-size:2vh;color:var(--doux);margin-bottom:.6vh}
+.case p{font-size:2.05vh}
+.case em{display:block;font-style:normal;margin-top:1.4vh;padding-top:1.2vh;border-top:1px solid var(--trait);font-size:1.9vh;color:var(--doux);line-height:1.45}
+.regles p{margin-bottom:1.8vh}
+.lex{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 4vw}
+.lex div{display:grid;grid-template-columns:16ch minmax(0,1fr);gap:1vw;font-size:2vh;line-height:1.45;padding:1.1vh 0;border-bottom:1px solid var(--trait)}
+.lex b{font-weight:600}
+@media print{html,body{overflow:visible;height:auto}.hud,.pied{display:none}#scene{position:static}.s{position:static;display:block!important;padding:8mm 0;page-break-inside:avoid;border-bottom:1px solid #999}h1{font-size:26pt}h2{font-size:15pt;margin-bottom:4mm}h3{font-size:11pt}p,li,.texte p,.case p,.lex div,.sous,.case em{font-size:10pt}.sous-titre{font-size:13pt}.etapes,.rep{font-size:10pt}.copie{display:none}.deux,.cinq,.quatre{gap:6mm}}
+</style></head>
+<body>
+<header class="hud"><span>Projet applicatif cyber</span><span id="fil"></span></header>
+<main id="scene">
+
+<section class="s">
+ <h1>Projet applicatif cyber</h1>
+ <p class="sous-titre">Concevoir, coder et expliquer une application de sécurité en une journée.</p>
+ <p class="etapes">Cadrage, code, documentation, revue des failles, démonstration.</p>
+</section>
+
+<section class="s">
+ <p class="rep">1. L'objectif</p>
+ <h2>Ce que vous allez faire aujourd'hui</h2>
+ <div class="texte">
+  <p>Par équipe, vous développez une petite application web utile à une équipe de sécurité. Vous choisissez le sujet dans la liste proposée et vous travaillez dans le langage de votre choix.</p>
+  <p>Le résultat attendu n'est pas un produit fini. C'est un premier périmètre qui fonctionne et que chaque membre de l'équipe sait expliquer.</p>
+  <p>L'application manipule des informations sensibles. Vous décidez vous-mêmes de ce qu'il faut protéger et de la manière de le faire. Aucune liste de mesures n'est fournie.</p>
+  <p>En fin de journée, chaque équipe présente son application, ouvre son code et le commente.</p>
+ </div>
+</section>
+
+<section class="s">
+ <p class="rep">2. Le sujet</p>
+ <h2>Une application au choix, quatre contraintes communes</h2>
+ <div class="deux">
+  <div><h3>Les applications possibles</h3>
+   <ul class="liste">
+    <li><i>A</i><span><b>Tableau de bord des alertes.</b> Le centre de sécurité consulte les alertes de la nuit, les trie, change leur statut et laisse un commentaire.</span></li>
+    <li><i>B</i><span><b>Portail de signalement d'hameçonnage.</b> Un salarié signale un courriel suspect. Un analyste le qualifie et lui répond.</span></li>
+    <li><i>C</i><span><b>Suivi des vulnérabilités.</b> Les machines, leurs failles connues, leur gravité, la personne qui corrige et l'échéance.</span></li>
+    <li><i>D</i><span><b>Vérificateur d'indicateurs.</b> On saisit une adresse IP, un domaine ou une empreinte de fichier. L'application affiche ce que l'on en sait.</span></li>
+    <li><i>E</i><span><b>Coffre des accès partagés.</b> L'équipe y range ses accès communs et sait qui a consulté quoi.</span></li>
+    <li><i>F</i><span><b>Sujet libre.</b> Il doit servir une équipe de sécurité et être validé par le formateur au cadrage.</span></li>
+   </ul>
+  </div>
+  <div><h3>Les contraintes imposées</h3>
+   <ul class="liste">
+    <li><i>1</i><span><b>Des comptes et deux rôles.</b> On se connecte. Un analyste et un administrateur ne voient pas et ne font pas la même chose.</span></li>
+    <li><i>2</i><span><b>Une clé d'API.</b> L'application interroge une API de renseignement avec la clé ci-dessous. L'API est fictive et vous simulez ses réponses. La clé se traite comme une vraie.<br><span class="cle">orb_live_7Q2M9XK4T8VD3LHB</span></span></li>
+    <li><i>3</i><span><b>Une saisie réaffichée.</b> Au moins un texte saisi par un utilisateur est affiché à un autre, par exemple un commentaire ou un motif.</span></li>
+    <li><i>4</i><span><b>Des données conservées.</b> Ce qui est saisi se retrouve après un rechargement de la page.</span></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="s">
+ <p class="rep">3. Le cadrage</p>
+ <h2>Une page de cadrage avant la première ligne de code</h2>
+ <div class="deux">
+  <div class="col"><h3>Le produit minimal (MVP)</h3><p>Le plus petit périmètre qui rend déjà service.</p>
+   <ol class="num"><li>L'objectif de l'application en une phrase.</li><li>Les utilisateurs et ce que chaque rôle a le droit de faire.</li><li>Trois fonctionnalités au maximum, dans l'ordre de livraison.</li><li>Ce que vous ne ferez pas aujourd'hui.</li><li>Le langage, les bibliothèques et l'endroit où sont stockées les données.</li><li>La répartition du travail dans l'équipe.</li></ol></div>
+  <div class="col"><h3>La sécurité</h3><p>Elle se décide avant de coder. C'est votre analyse qui est attendue.</p>
+   <ol class="num"><li>Qu'y a-t-il à protéger dans votre application ?</li><li>Contre qui et contre quoi ?</li><li>Quelles mesures prenez-vous, par ordre de priorité ?</li><li>Que laissez-vous de côté aujourd'hui et pourquoi ?</li></ol></div>
+ </div>
+ <div class="sous"><button class="copie" data-c="cadrage">Copier le modèle de fiche</button><span>À coller dans un fichier <code>CADRAGE.md</code> à la racine du dépôt. Le formateur valide la fiche avant le début du code.</span></div>
+</section>
+
+<section class="s">
+ <p class="rep">4. Le déroulé</p>
+ <h2>Cinq étapes</h2>
+ <div class="cinq">
+  <div class="case"><i>Étape 1</i><h3>Cadrer</h3><p>Constitution des équipes, choix de l'application, fiche de cadrage.</p><em>La fiche est validée par le formateur.</em></div>
+  <div class="case"><i>Étape 2</i><h3>Coder</h3><p>Le socle, la connexion, puis la première fonctionnalité.</p><em>On se connecte et une fonctionnalité marche.</em></div>
+  <div class="case"><i>Étape 3</i><h3>Finir et documenter</h3><p>Les fonctionnalités restantes, le fichier README, les commentaires utiles.</p><em>Une personne extérieure peut lancer l'application.</em></div>
+  <div class="case"><i>Étape 4</i><h3>Relire ses failles</h3><p>Vous relisez votre code comme le ferait un attaquant. Vous notez ce que vous trouvez et vous corrigez le plus grave.</p><em>La revue des failles est écrite. Le code est gelé.</em></div>
+  <div class="case"><i>Étape 5</i><h3>Démontrer</h3><p>Chaque équipe montre son application, puis ouvre son code et l'explique.</p><em>Toute l'équipe participe.</em></div>
+ </div>
+ <p class="sous">Le formateur annonce le passage d'une étape à la suivante.</p>
+</section>
+
+<section class="s">
+ <p class="rep">5. Les livrables</p>
+ <h2>Quatre éléments à rendre dans le dépôt</h2>
+ <div class="quatre">
+  <div class="case"><i>1</i><h3>La fiche de cadrage</h3><p>Le fichier <code>CADRAGE.md</code> validé au début. Si le périmètre a changé en cours de route, vous l'indiquez à la fin de la fiche.</p></div>
+  <div class="case"><i>2</i><h3>Le code</h3><p>Il fonctionne sur votre poste, depuis un dépôt Git. Un fichier <code>README.md</code> explique comment l'installer et le lancer, et donne les comptes d'essai.</p></div>
+  <div class="case"><i>3</i><h3>La documentation du code</h3><p>Des commentaires là où un lecteur se poserait une question. Ils expliquent la raison d'un choix ou le risque traité, sans paraphraser le code.</p></div>
+  <div class="case"><i>4</i><h3>La revue des failles</h3><p>Le fichier <code>REVUE.md</code> liste chaque faiblesse trouvée, son emplacement, sa gravité, son état et la raison de ce choix.</p></div>
+ </div>
+ <div class="sous"><button class="copie" data-c="revue">Copier le modèle de revue</button><span>Données fictives uniquement. Aucun vrai mot de passe, aucune vraie donnée personnelle, aucun essai sur un système qui n'est pas le vôtre.</span></div>
+</section>
+
+<section class="s">
+ <p class="rep">6. La démonstration</p>
+ <h2>Vous présentez le code, pas un diaporama</h2>
+ <div class="deux">
+  <div><h3>La revue de code en quatre points</h3>
+   <ul class="liste">
+    <li><i>1</i><span><b>Le trajet d'une connexion.</b> De la saisie du mot de passe à l'ouverture de la session, en montrant chaque fichier traversé.</span></li>
+    <li><i>2</i><span><b>Le trajet de la clé d'API.</b> Où elle est rangée, qui peut la lire, par où elle passe quand l'application s'en sert.</span></li>
+    <li><i>3</i><span><b>Le trajet d'une saisie.</b> Du champ où un utilisateur écrit jusqu'à l'écran où un autre la lit.</span></li>
+    <li><i>4</i><span><b>Deux failles.</b> Une que vous avez trouvée et corrigée. Une que vous connaissez et que vous avez laissée, avec votre raison.</span></li>
+   </ul>
+  </div>
+  <div class="regles"><h3>Les règles</h3>
+   <p>Tous les outils sont permis, y compris la documentation, les bibliothèques et les assistants de code. Chaque membre de l'équipe doit savoir expliquer chaque ligne présentée.</p>
+   <p>Il n'y a pas de classement. Ce qui compte, ce sont vos choix, vos justifications et votre réaction face à une difficulté.</p>
+   <p>Le formateur peut demander d'ouvrir un fichier, l'onglet Réseau du navigateur ou l'historique du dépôt. Tous les membres de l'équipe peuvent être interrogés.</p>
+  </div>
+ </div>
+</section>
+
+<section class="s">
+ <p class="rep">7. Le lexique</p>
+ <h2>Les mots utilisés</h2>
+ <div class="lex">
+  <div><b>API</b><span>Interface de programmation. Le moyen par lequel une application en interroge une autre.</span></div>
+  <div><b>Clé d'API</b><span>Le secret qui prouve à une API que l'appel vient d'un client autorisé.</span></div>
+  <div><b>Cadrage</b><span>Le moment où l'on décide ce que l'on fait, ce que l'on ne fait pas et dans quel ordre.</span></div>
+  <div><b>Dépôt</b><span>Le dossier du projet suivi par Git, avec tout son historique.</span></div>
+  <div><b>Front</b><span>La partie d'une application que l'utilisateur voit et manipule dans son navigateur.</span></div>
+  <div><b>Hameçonnage</b><span>Un message frauduleux qui cherche à obtenir un mot de passe ou un clic.</span></div>
+  <div><b>Indicateur</b><span>Une trace technique d'attaque, comme une adresse IP, un nom de domaine ou une empreinte de fichier.</span></div>
+  <div><b>MVP</b><span>Minimum Viable Product, ou produit minimum viable. Le plus petit périmètre qui rend déjà service.</span></div>
+  <div><b>README</b><span>Le fichier d'accueil d'un dépôt. Il dit à quoi sert le projet et comment le lancer.</span></div>
+  <div><b>Revue de code</b><span>La relecture du code par quelqu'un qui cherche les erreurs et les faiblesses.</span></div>
+  <div><b>Rôle</b><span>Un ensemble de droits donné à un type d'utilisateur.</span></div>
+  <div><b>Vulnérabilité</b><span>Une faiblesse qu'un attaquant peut exploiter.</span></div>
+ </div>
+</section>
+
+</main>
+<footer class="pied">
+ <button id="av">Précédent</button><button id="ap">Suivant</button><button id="imp">Imprimer</button>
+ <span class="aide">Flèches du clavier pour naviguer, F pour le plein écran, L pour le lexique</span><span id="num"></span>
+</footer>
+<script>
+(function(){
+const S=Array.from(document.querySelectorAll('.s'));
+let i=0;try{i=Math.min(S.length-1,Math.max(0,parseInt(sessionStorage.getItem('pac_s')||'0',10)||0));}catch(e){}
+function va(k){i=Math.max(0,Math.min(S.length-1,k));S.forEach((s,n)=>s.classList.toggle('on',n===i));
+ document.getElementById('num').textContent=(i+1)+' sur '+S.length;
+ const r=S[i].querySelector('.rep');document.getElementById('fil').textContent=r?r.textContent:'';
+ try{sessionStorage.setItem('pac_s',i);}catch(e){}}
+document.getElementById('av').onclick=()=>va(i-1);document.getElementById('ap').onclick=()=>va(i+1);
+document.getElementById('imp').onclick=()=>window.print();
+document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;const k=e.key;
+ if(k==='ArrowRight'||k==='PageDown'||k===' '){e.preventDefault();va(i+1);}
+ else if(k==='ArrowLeft'||k==='PageUp'){e.preventDefault();va(i-1);}
+ else if(k==='Home')va(0);else if(k==='End')va(S.length-1);
+ else if(k==='l'||k==='L')va(S.length-1);
+ else if(k==='f'||k==='F'){if(document.fullscreenElement)document.exitFullscreen();else if(document.documentElement.requestFullscreen)document.documentElement.requestFullscreen().catch(()=>{});}});
+const M={cadrage:"# Fiche de cadrage\n\n## Équipe\n\n\n## Application choisie\n\n\n## Le produit minimal\n\n### Objectif en une phrase\n\n\n### Utilisateurs et droits de chaque rôle\n\n\n### Trois fonctionnalités, dans l'ordre de livraison\n\n1.\n2.\n3.\n\n### Ce que nous ne ferons pas aujourd'hui\n\n\n### Langage, bibliothèques, stockage des données\n\n\n### Répartition du travail\n\n\n## La sécurité\n\n### Ce qu'il y a à protéger\n\n\n### Contre qui et contre quoi\n\n\n### Nos mesures, par ordre de priorité\n\n1.\n2.\n3.\n\n### Ce que nous laissons de côté aujourd'hui et pourquoi\n\n\n## En fin de journée\n\n### Ce qui a changé par rapport à ce cadrage et pourquoi\n\n",
+revue:"# Revue des failles\n\n## Équipe\n\n\n## Constats\n\n| Constat | Fichier et ligne | Gravité | État | Correction ou raison du report |\n|---|---|---|---|---|\n|  |  | haute, moyenne ou basse | corrigé ou reporté |  |\n|  |  |  |  |  |\n\n## Ce qu'un attaquant essaierait en premier sur notre application\n\n\n## Ce que nous ferions avec une journée de plus\n\n"};
+document.querySelectorAll('.copie').forEach(b=>b.onclick=()=>{const t=M[b.dataset.c],l=b.textContent;
+ const fin=ok=>{b.textContent=ok?'Copié':'Copie impossible';setTimeout(()=>{b.textContent=l;},1800);};
+ const secours=()=>{const a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();let ok=false;try{ok=document.execCommand('copy');}catch(e){}document.body.removeChild(a);fin(ok);};
+ if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(()=>fin(true)).catch(secours);else secours();});
+va(i);
+})();
+</script>
+</body></html>

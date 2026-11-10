@@ -14,12 +14,12 @@ Le formateur donne aux équipes un lien complété d'un identifiant de suivi. La
 l'affiche tout prêt dans l'onglet Suivi des équipes. Sans cet identifiant, le cours fonctionne
 normalement, mais l'avancement de l'équipe n'est pas remonté.
 
-## Ligne de front, le défi du jour
+## Projet applicatif cyber
 
-Une journée de projet : chaque équipe cadre, code, documente et relit une petite application pour
-l'équipe sécurité d'Orbitale, puis ouvre son code en démonstration.
+Une journée de projet. Chaque équipe cadre, code, documente et relit une petite application de
+sécurité, puis présente son code en démonstration.
 
-https://h4ckg3t.github.io/Tenant-zero/Ligne_de_Front_Defi_Securite.html
+https://h4ckg3t.github.io/Tenant-zero/Projet_Applicatif_Cyber.html
 
 ## Boîte Blanche, l'audit du code
 
@@ -64,7 +64,8 @@ cours.
 | Fichier ou dossier | Rôle |
 |---|---|
 | Tenant_Zero_Poste_Orbitale.html | Le cours Tenant Zéro, version protégée |
-| Ligne_de_Front_Defi_Securite.html | Le sujet du défi Ligne de front |
+| Projet_Applicatif_Cyber.html | Le sujet du projet applicatif cyber |
+| Ligne_de_Front_Defi_Securite.html | Ancienne adresse du même sujet |
 | Boite_Blanche_Audit_du_Code.html | Le cours Boîte Blanche, version protégée |
 | pyodide/ | Interpréteur Python de Boîte Blanche (chargé à la demande) |
 | index.html | Page d'accueil, renvoie vers les deux cours |
