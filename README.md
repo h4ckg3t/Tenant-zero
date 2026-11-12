@@ -1,7 +1,7 @@
 # Orbitale Systèmes
 
-Deux supports de cours d'une journée, même entreprise fictive. Chacun est un seul fichier HTML,
-hors ligne, avec la formation intégrée, des missions en cascade et une console animateur chiffrée.
+Des supports de cours autour d'une même entreprise fictive. Chacun est un seul fichier HTML,
+avec des missions en cascade et une console animateur chiffrée.
 
 ## Tenant Zéro, le poste Orbitale
 
@@ -21,21 +21,21 @@ sécurité, puis présente son code en démonstration.
 
 https://h4ckg3t.github.io/Tenant-zero/Projet_Applicatif_Cyber.html
 
-## Boîte Blanche, l'audit du code
+## Audit du code, la passerelle d'audit
 
-Revue de code HTML et JavaScript le matin, Python pour la sécurité l'après-midi. L'équipe d'audit
-relit le code du portail Orbitale, puis écrit son propre outil d'enquête sur les journaux de
-l'incident.
+Une mission de test d'intrusion en boîte noire sur Orbitale : un terminal à gauche, un éditeur à
+droite, dix objectifs qui s'enchaînent. À chaque étape, un script Python est laissé sur la
+passerelle. Il a l'air correct. L'équipe doit le lire, comprendre ce qu'il fait vraiment et le
+corriger.
 
-https://h4ckg3t.github.io/Tenant-zero/Boite_Blanche_Audit_du_Code.html
+https://h4ckg3t.github.io/Tenant-zero/Terminal_Pentest_Orbitale.html
 
-Le cours s'ouvre aussi dans le poste Tenant Zéro : dossier Audit du code sur le bureau, avec le cours et le lab.
+La mission s'ouvre aussi dans le poste Tenant Zéro : dossier Audit du code sur le bureau.
 
-Ce cours charge un interpréteur Python dans le navigateur (dossier pyodide/, environ 13 Mo),
-récupéré seulement au premier lancement d'une mission Python. Une connexion est donc nécessaire à
-ce moment-là, même si le reste du cours fonctionne hors ligne.
+Elle charge un interpréteur Python dans le navigateur (dossier pyodide/, environ 13 Mo),
+récupéré au premier lancement d'un script. Une connexion est donc nécessaire à ce moment-là.
 
-L'adresse courte https://h4ckg3t.github.io/Tenant-zero/ renvoie vers une page qui propose les deux
+L'adresse courte https://h4ckg3t.github.io/Tenant-zero/ renvoie vers une page qui propose les
 cours.
 
 ## Pour les étudiants
@@ -53,9 +53,9 @@ cours.
 - La console animateur, les corrections et les notes sont chiffrées dans chaque fichier et
   s'ouvrent avec le code animateur (Ctrl Alt P). Rien de tout cela n'est lisible dans le code
   source.
-- Le suivi des équipes de Tenant Zéro passe par une feuille Google Sheets et un script Apps
-  Script, à régler dans l'onglet Suivi des équipes de la console. Le guide de mise en place est
-  fourni avec le cours, hors de ce dépôt.
+- Le suivi des équipes passe par une feuille Google Sheets et un script Apps Script, à régler
+  dans la console. Chaque cours a sa propre feuille : Tenant Zéro la sienne, la passerelle
+  d'audit la sienne. Les guides de mise en place sont fournis avec les cours, hors de ce dépôt.
 - Pour publier une nouvelle version d'un cours : remplacer son fichier HTML sur la branche main,
   l'adresse ne change pas. Le site est reconstruit en une à deux minutes (onglet Actions).
 
@@ -66,9 +66,9 @@ cours.
 | Tenant_Zero_Poste_Orbitale.html | Le cours Tenant Zéro, version protégée |
 | Projet_Applicatif_Cyber.html | Le sujet du projet applicatif cyber |
 | Ligne_de_Front_Defi_Securite.html | Ancienne adresse du même sujet |
-| Boite_Blanche_Audit_du_Code.html | Le cours Boîte Blanche, version protégée |
-| pyodide/ | Interpréteur Python de Boîte Blanche (chargé à la demande) |
-| index.html | Page d'accueil, renvoie vers les deux cours |
+| Terminal_Pentest_Orbitale.html | La passerelle d'audit, version protégée |
+| pyodide/ | Interpréteur Python de la passerelle d'audit (chargé à la demande) |
+| index.html | Page d'accueil, renvoie vers les cours |
 | .nojekyll | Publication des fichiers tels quels par GitHub Pages |
 
 Les sources, les corrigés du formateur et le script de suivi ne sont pas publiés.
