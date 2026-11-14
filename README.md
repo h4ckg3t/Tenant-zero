@@ -10,6 +10,12 @@ simulé, avec un centre d'administration Entra reproduit.
 
 https://h4ckg3t.github.io/Tenant-zero/Tenant_Zero_Poste_Orbitale.html
 
+À l'arrivée, le bureau d'ORBITAL est neutre : un dossier par exercice, rien ne s'ouvre tout
+seul. Le dossier Tenant Zéro, sur le bureau, démarre l'exercice : ses outils se posent sur le
+bureau, le panneau Missions apparaît, le courriel de bienvenue et le diagnostic s'ouvrent.
+L'avancement est gardé sur le poste. Le même dossier permet de quitter l'exercice et de le
+reprendre.
+
 Le formateur donne aux équipes un lien complété d'un identifiant de suivi. La console animateur
 l'affiche tout prêt dans l'onglet Suivi des équipes. Sans cet identifiant, le cours fonctionne
 normalement, mais l'avancement de l'équipe n'est pas remonté.
@@ -47,7 +53,7 @@ corriger.
 
 https://h4ckg3t.github.io/Tenant-zero/Terminal_Pentest_Orbitale.html
 
-La mission s'ouvre aussi dans le poste Tenant Zéro : dossier Audit du code sur le bureau.
+La mission s'ouvre aussi depuis le bureau d'ORBITAL : dossier Audit du code.
 
 Elle charge un interpréteur Python dans le navigateur (dossier pyodide/, environ 13 Mo),
 récupéré au premier lancement d'un script. Une connexion est donc nécessaire à ce moment-là.
