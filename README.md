@@ -25,7 +25,7 @@ fois.
 - Ouvrir d'abord le lien donné par le formateur, avec son identifiant de suivi, puis installer :
   l'application garde l'identifiant.
 - À la première ouverture de la journée, une séquence de démarrage se joue : G3TH4CK3D, puis
-  ORBITAL. Un clic ou une touche la passe. Les ouvertures suivantes vont droit au poste dans un
+  ORBITAL, avec un lapin bien vivant (nez, oreilles, queue). Un clic ou une touche la passe. Les ouvertures suivantes vont droit au poste dans un
   navigateur. Dans l'application, elles jouent une version courte.
 - Ajouter ?demarrage=1 à l'adresse rejoue la séquence complète. Ajouter ?demarrage=0 l'enlève.
 
