@@ -1,19 +1,56 @@
 {
   "name": "ORBITAL",
   "short_name": "ORBITAL",
-  "description": "Environnement d'apprentissage G3TH4CK3D : cours, exercices et missions sur le poste Orbitale.",
+  "description": "Environnement d'apprentissage G3TH4CK3D : cours, exercices et missions de cybersécurité sur le poste Orbitale.",
   "lang": "fr",
   "id": "orbital",
   "start_url": "./Tenant_Zero_Poste_Orbitale.html",
   "scope": "./",
   "display": "fullscreen",
-  "display_override": ["fullscreen", "standalone"],
+  "display_override": [
+    "fullscreen",
+    "standalone"
+  ],
   "orientation": "landscape",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
-    {"src": "orbital/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
-    {"src": "orbital/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
-    {"src": "orbital/icone-pleine-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+    {
+      "src": "orbital/icone-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "orbital/icone-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "orbital/icone-pleine-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": [
+    "education"
+  ],
+  "screenshots": [
+    {
+      "src": "orbital/capture-bureau.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Le poste Orbitale : messagerie, missions et outils"
+    },
+    {
+      "src": "orbital/capture-demarrage.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "ORBITAL, une application G3TH4CK3D"
+    }
   ]
 }

@@ -28,6 +28,8 @@ fois.
   ORBITAL, avec un lapin bien vivant (nez, oreilles, queue). Un clic ou une touche la passe. Les ouvertures suivantes vont droit au poste dans un
   navigateur. Dans l'application, elles jouent une version courte.
 - Ajouter ?demarrage=1 à l'adresse rejoue la séquence complète. Ajouter ?demarrage=0 l'enlève.
+- Un court carillon accompagne l'entrée dans le poste. La touche M coupe le son, le réglage est
+  gardé.
 
 ## Projet applicatif cyber
 
@@ -81,7 +83,7 @@ cours.
 | Tenant_Zero_Poste_Orbitale.html | Le cours Tenant Zéro, version protégée |
 | orbital.webmanifest | Fiche de l'application ORBITAL (nom, icônes, plein écran) |
 | orbital-sw.js | Service de cache : le poste s'ouvre encore sans connexion |
-| orbital/ | Icônes de l'application ORBITAL |
+| orbital/ | Icônes de l'application ORBITAL et captures de sa fenêtre d'installation |
 | Projet_Applicatif_Cyber.html | Le sujet du projet applicatif cyber |
 | Ligne_de_Front_Defi_Securite.html | Ancienne adresse du même sujet |
 | Terminal_Pentest_Orbitale.html | La passerelle d'audit, version protégée |
