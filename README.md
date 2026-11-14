@@ -14,6 +14,23 @@ Le formateur donne aux équipes un lien complété d'un identifiant de suivi. La
 l'affiche tout prêt dans l'onglet Suivi des équipes. Sans cet identifiant, le cours fonctionne
 normalement, mais l'avancement de l'équipe n'est pas remonté.
 
+### ORBITAL en application
+
+Le poste s'installe comme une application : une icône ORBITAL sur le bureau, une fenêtre sans
+barre de navigateur, et un poste qui s'ouvre encore sans connexion une fois chargé une première
+fois.
+
+- Avec Edge ou Chrome, ouvrir le lien du poste, puis cliquer sur « Installer ORBITAL sur ce
+  poste », sur l'écran de connexion. Firefox ne propose pas l'installation sur ordinateur.
+- Ouvrir d'abord le lien donné par le formateur, avec son identifiant de suivi, puis installer :
+  l'application garde l'identifiant.
+- À la première ouverture de la journée, une séquence de démarrage se joue : G3TH4CK3D, puis
+  ORBITAL, avec un lapin bien vivant (nez, oreilles, queue). Un clic ou une touche la passe. Les ouvertures suivantes vont droit au poste dans un
+  navigateur. Dans l'application, elles jouent une version courte.
+- Ajouter ?demarrage=1 à l'adresse rejoue la séquence complète. Ajouter ?demarrage=0 l'enlève.
+- Un court carillon accompagne l'entrée dans le poste. La touche M coupe le son, le réglage est
+  gardé.
+
 ## Projet applicatif cyber
 
 Une journée de projet. Chaque équipe cadre, code, documente et relit une petite application de
@@ -64,6 +81,9 @@ cours.
 | Fichier ou dossier | Rôle |
 |---|---|
 | Tenant_Zero_Poste_Orbitale.html | Le cours Tenant Zéro, version protégée |
+| orbital.webmanifest | Fiche de l'application ORBITAL (nom, icônes, plein écran) |
+| orbital-sw.js | Service de cache : le poste s'ouvre encore sans connexion |
+| orbital/ | Icônes de l'application ORBITAL et captures de sa fenêtre d'installation |
 | Projet_Applicatif_Cyber.html | Le sujet du projet applicatif cyber |
 | Ligne_de_Front_Defi_Securite.html | Ancienne adresse du même sujet |
 | Terminal_Pentest_Orbitale.html | La passerelle d'audit, version protégée |
